@@ -1,16 +1,15 @@
 {
-  "name": "FastLED-IO",
-  "version": "1.0.3",
-  "description": "High-level library for FastLED integration into MyrtIO",
+  "name": "LEDCoordinator",
+  "version": "1.0.0",
+  "description": "High-level rendering engine",
   "keywords": "leds, effects",
   "dependencies": {
-    "fastled/FastLED": "3.7.0",
     "mishamyrt/attotime": "1.0.1"
   },
   "repository":
   {
     "type": "git",
-    "url": "https://github.com/MyrtIO/fastled-io.git"
+    "url": "https://github.com/MyrtIO/led-coordinator.git"
   },
   "authors":
   [
