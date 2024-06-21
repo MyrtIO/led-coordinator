@@ -10,6 +10,14 @@ public:
   void set(CRGB color, uint8_t from, uint8_t to);
   CRGB get(uint8_t idx);
 
+  CRGB* leds() {
+    return leds_;
+  }
+
+  uint8_t length() {
+    return length_;
+  }
+
 protected:
   struct CRGB* leds_;
   uint8_t length_;
