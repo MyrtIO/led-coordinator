@@ -1,8 +1,12 @@
 {
   "name": "FastLED-IO",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "High-level library for FastLED integration into MyrtIO",
   "keywords": "leds, effects",
+  "dependencies": {
+    "fastled/FastLED": "3.7.0",
+    "mishamyrt/attotime": "1.0.1"
+  },
   "repository":
   {
     "type": "git",
