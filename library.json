@@ -1,6 +1,6 @@
 {
   "name": "FastLED-IO",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "High-level library for FastLED integration into MyrtIO",
   "keywords": "leds, effects",
   "dependencies": {

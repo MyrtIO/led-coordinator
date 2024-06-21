@@ -9,3 +9,7 @@ format:
 .PHONY: test
 test:
 	pio test --without-uploading -e uno
+
+.PHONY: publish
+publish:
+	pio pkg publish

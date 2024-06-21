@@ -9,7 +9,7 @@ public:
   virtual bool handleFrame() = 0;
 };
 
-class ILEDEffect : public IRenderer {
+class ILEDEffect {
 public:
   // Handle a frame of animation. Should return true if the frame should be rendered.
   virtual bool handleFrame(StripState* state, LEDStrip* strip) = 0;
