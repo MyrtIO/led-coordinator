@@ -1,3 +1,3 @@
-# LED Coordinator
+# LightComposer
 
-High-level library for FastLED integration into MyrtIO.
+High-level library for LEDs control.
