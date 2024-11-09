@@ -3,6 +3,7 @@
 #include <stdint.h>
 #include <LightComposer/color/rgb_color.h>
 #include <LightComposer/i_light_hal.h>
+#include "i_pixels.h"
 
 class IEffectProvider {
 public:
