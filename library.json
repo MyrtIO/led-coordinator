@@ -1,5 +1,5 @@
 {
-  "name": "LEDCoordinator",
+  "name": "LightComposer",
   "version": "1.0.0",
   "description": "High-level rendering engine",
   "keywords": "leds, effects",
@@ -9,7 +9,7 @@
   "repository":
   {
     "type": "git",
-    "url": "https://github.com/MyrtIO/led-coordinator.git"
+    "url": "https://github.com/MyrtIO/light_composer.git"
   },
   "authors":
   [
