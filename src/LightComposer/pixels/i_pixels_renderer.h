@@ -1,5 +1,7 @@
 #pragma once
 
+#include <LightComposer/i_renderer.h>
+
 template <class Locator>
 class IPixelsRenderer: public IRenderer, public IEffectChanger {
 public:

@@ -1,6 +1,6 @@
 {
   "name": "LightComposer",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "High-level rendering engine",
   "keywords": "leds, effects",
   "dependencies": {
