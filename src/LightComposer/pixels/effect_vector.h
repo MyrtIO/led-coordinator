@@ -5,49 +5,24 @@
 
 typedef uint8_t effect_t;
 
-template <class Locator>
-struct EffectInstance {
-	IPixelsEffect<Locator>* effect;
-	effect_t code;
-};
-
 template <class Locator, uint16_t Size = 16>
-class EffectVector {
+class EffectList {
 public:
-	EffectVector& insert(effect_t code, IPixelsEffect<Locator>* effect) {
+	EffectList& insert(IPixelsEffect<Locator>* effect) {
 		if (size_ >= Size) {
 			return *this;
 		}
-		effects_[size_].effect = effect;
-		effects_[size_].code = code;
+		effects_[size_] = effect;
 		names_[size_] = effect->getName();
 		size_++;
 
 		return *this;
 	}
 
-	IPixelsEffect<Locator>* getInstanceByCode(effect_t code) {
+	IPixelsEffect<Locator>* find(const char* name) {
 		for (size_t i = 0; i < size_; i++) {
-			if (effects_[i].code == code) {
-				return effects_[i].effect;
-			}
-		}
-		return nullptr;
-	}
-
-	effect_t getCodeByInstance(IPixelsEffect<Locator>* effect) {
-		for (size_t i = 0; i < size_; i++) {
-			if (effects_[i].effect == effect) {
-				return effects_[i].code;
-			}
-		}
-		return 0;
-	}
-
-	IPixelsEffect<Locator>* getInstanceByName(const char* name) {
-		for (size_t i = 0; i < size_; i++) {
-			if (strcmp(effects_[i].effect->getName(), name) == 0) {
-				return effects_[i].effect;
+			if (strcmp(effects_[i]->getName(), name) == 0) {
+				return effects_[i];
 			}
 		}
 		return 0;
@@ -66,7 +41,7 @@ public:
 	}
 
 private:
-	EffectInstance<Locator> effects_[Size];
+	IPixelsEffect<Locator>* effects_[Size];
 	const char* names_[Size];
 	size_t size_ = 0;
 };
