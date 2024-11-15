@@ -27,6 +27,8 @@ struct LightState {
 template <class Locator>
 class IPixelsEffect {
 public:
+	virtual const char* getName();
+
 	// Handle a frame of animation.
 	// Should return true if rendering is needed.
 	virtual bool handleFrame(LightState<Locator>& state, IPixels& pixels) = 0;
